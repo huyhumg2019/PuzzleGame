@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class PuzzleJFrame extends JFrame implements ActionListener{
 
@@ -44,11 +45,11 @@ public class PuzzleJFrame extends JFrame implements ActionListener{
 		b7.addActionListener(this);
 		b8.addActionListener(this);
 		b9.addActionListener(this);
-		add(b1);add(b2);add(b3);add(b4);
+		add(b1);add(b2);add(b3);add(b4);//them button vao khung frame
 		add(b5);add(b6);add(b7);add(b8);add(b9);
-		setSize(400, 400);
-		setLayout(null);
-		setVisible(true);
+		setSize(500, 500); //tao khung jfarme
+		setLayout(null); // bo vien cho khung frame
+		setVisible(true); // an nen vien xung quanh button
 		
 		
 	}
@@ -56,6 +57,16 @@ public class PuzzleJFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		if(e.getSource()==b8){;
+			String label = b8.getLabel();//lay gia tri b1
+			if(b9.getLabel().equals(" ")) {
+				b9.setLabel(label);
+				b8.setLabel(" ");
+			}
+		}
+		if(b1.getLabel().equals("1")&&b2.getLabel().equals("2")&&b3.getLabel().equals("3")) {
+			JOptionPane.showConfirmDialog(PuzzleJFrame.this, "you win ");
+		}
 		
 	}
 
