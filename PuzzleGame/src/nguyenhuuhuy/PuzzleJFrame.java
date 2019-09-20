@@ -14,7 +14,7 @@ public class PuzzleJFrame extends JFrame implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	// bien button
-	Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+	Button b1, b2, b3, b4, b5, b6, b7, b8, b9,next;
 
 	// contructor
 	public PuzzleJFrame() {
@@ -36,7 +36,10 @@ public class PuzzleJFrame extends JFrame implements ActionListener {
 		b8.setBounds(100, 200, 50, 50);
 		b9 = new Button("8");
 		b9.setBounds(150, 200, 50, 50);
+		next =new Button("Reset Game");
+		next.setBounds(100, 300, 100, 50);
 		b1.addActionListener(this);
+		b2.addActionListener(this);
 		b2.addActionListener(this);
 		b3.addActionListener(this);
 		b4.addActionListener(this);
@@ -45,6 +48,7 @@ public class PuzzleJFrame extends JFrame implements ActionListener {
 		b7.addActionListener(this);
 		b8.addActionListener(this);
 		b9.addActionListener(this);
+		next.addActionListener(this);
 		add(b1);
 		add(b2);
 		add(b3);
@@ -54,6 +58,7 @@ public class PuzzleJFrame extends JFrame implements ActionListener {
 		add(b7);
 		add(b8);
 		add(b9);
+		add(next);
 		setSize(500, 500); // tao khung jfarme
 		setLayout(null); // bo vien cho khung frame
 		setVisible(true); // an nen vien xung quanh button
